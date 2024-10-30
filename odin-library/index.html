@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./styles.css" />
+	<title>Odin Library</title>
+</head>
+<body>
+	<div class="add-a-book">
+		
+		<div class="new-book-inputs">
+			<p class="input-title">Title</p>
+			<input type="text" class="title-input input" title="Title">
+			<p class="input-title">Author</p>
+			<input type="text" class="author-input input">
+			<p class="input-title">Publication date</p>
+			<input type="text" class="date-input input">
+			<p class="input-title">Genre</p>
+			<input type="text" class="genre-input input">
+		</div>
+		<div class="new-book-textarea">
+			<p class="input-title">Synopsis</p>
+			<textarea type="text" class="synopsis-textarea input"></textarea>
+		</div>
+		<button class="add-book-button" onclick="addBookToLibrary()">add a book</button>
+	</div>
+	<div id="library-container">
+		<div class="book">
+			<div class="book-infos">
+				<div class="title-author">
+					<p>Title</p>
+					<p>Author Name</p>
+				</div>
+				<div class="date-genre">
+					<p>Publication</p>
+					<p>Genre</p>
+				</div>
+			</div>
+			<p class="synopsis">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod blanditiis nesciunt earum corporis fugiat, vitae culpa voluptatibus ut accusamus animi! Dicta eaque nostrum hic minima iure deleniti iusto doloremque accusantium.</p>
+		</div>
+		
+	</div>
+	<script src="./script.js"></script>
+	
+</body>
+</html>
