@@ -12,29 +12,6 @@ const Gameboard = (function(){
 					[".", ".", "."],
 				]
 	
-	const buildCells = () => {
-		
-		
-		for (let i = 0; i < boardArray.length; i++){
-			const rowDiv = document.createElement('div')
-			rowDiv.classList.add('board-row')
-			for (let j = 0; j < boardArray[i].length; j++){
-				const cellButton = document.createElement('button')
-					cellButton.classList.add('board-cell')
-					cellButton.id = `${i}${j}`
-					cellButton.textContent = boardArray[i][j]
-					
-				
-				cellButton.addEventListener('click', () => PlayGame.play(i, j))
-				
-				rowDiv.append(cellButton)
-				
-			}
-			gameBoardDiv.append(rowDiv)
-		}
-		
-	}
-	
 	const displayCells = () => {
 		let boardString = "";
 		
@@ -46,15 +23,15 @@ const Gameboard = (function(){
 		console.log(boardString)
 	}
 	
-	return { buildCells , displayCells, gameBoardDiv , boardArray , blankBoardArray }
+	return { displayCells, gameBoardDiv , boardArray , blankBoardArray }
 	
 })();
 
 const Player = (function(){
 	
 	
-	const crossPlayerP = document.createElement('p')
-	const circlePlayerP = document.createElement('p')
+	const crossPlayerP = document.querySelector('.x-player')
+	const circlePlayerP = document.querySelector('.o-player')
 	
 	let isCrossPlayerTurn = true
 	
@@ -64,37 +41,21 @@ const Player = (function(){
 		isCrossPlayerTurn = !isCrossPlayerTurn
 	}
 	
-	const buildPlayersTurnDiv = () => {
-		
-		const playersDiv = document.querySelector('.which-players-turn')
-
-		crossPlayerP.innerText = "x"
-		crossPlayerP.classList.add("x-player-div", "player-div")
-
-		circlePlayerP.innerText = "o"
-		circlePlayerP.classList.add("o-player-div", "player-div")
-
-		playersDiv.append(crossPlayerP, circlePlayerP)
-		
-		updatePlayersStyle(crossPlayerP, circlePlayerP)
-		
-	}
-	
-	const updatePlayersStyle = (player1, player2) => {
+	const updatePlayersStyle = () => {
 		
 		const activeStyle = { fontSize: "26px", fontWeight: "600" };
 		const inactiveStyle = { fontSize: "20px", fontWeight: "400" };
 
 		const [activePlayerP, inactivePlayerP] = Player.getCoin() === "x" 
-		? [player1, player2] 
-		: [player2, player1];
+		? [crossPlayerP, circlePlayerP] 
+		: [circlePlayerP, crossPlayerP];
 
 		Object.assign(activePlayerP.style, activeStyle);
 		Object.assign(inactivePlayerP.style, inactiveStyle);
 	}
 		
 	
-	return { crossPlayerP , circlePlayerP , getCoin , changePlayer , buildPlayersTurnDiv , updatePlayersStyle }
+	return { getCoin , changePlayer , updatePlayersStyle }
 		
 })();
 
@@ -124,7 +85,7 @@ const PlayGame = (function(){
 		
 		if (isGameWon()) {
 			Player.changePlayer();
-			Player.updatePlayersStyle(Player.crossPlayerP, Player.circlePlayerP)
+			Player.updatePlayersStyle()
 			document.querySelector('.gameplay-state').textContent = `${Player.getCoin()} a gagné`
 			disableButtons()
 		} else if (isGameFinished()) {
@@ -196,10 +157,6 @@ const PlayGame = (function(){
 		
 	}
 	
-	
 	return { play , isGameWon , isGameFinished }
 	
 })();
-
-Gameboard.buildCells()
-Player.buildPlayersTurnDiv()
