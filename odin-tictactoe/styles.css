@@ -2,7 +2,29 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 }
+
+*{
+	font-family: "Playwrite GB S";
+}
+
+.which-players-turn{
+	display: flex;
+	flex-direction: row;
+	width: 50px;
+	height: 30px;
+	margin: 20px;
+	padding: 10px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.player-div{
+	font-size: 20px;
+	color: rgb(161, 69, 84);
+}
+
 
 #game-board{
 	display: flex;
@@ -20,4 +42,19 @@ body{
 	height: 100px;
 	border: 0.5px solid pink;
 	cursor: pointer;
+	font-size: 20px;
+	color: rgb(205, 83, 104);
+}
+
+.gameplay-state{
+	height: 40px;
+}
+
+.play-again{
+	background-color: aliceblue;
+	border: 1px solid pink;
+	border-radius: 10px;
+	padding: 5px 10px;
+	cursor: pointer;
+	color: rgb(137, 38, 54);
 }
