@@ -2,14 +2,14 @@ const Gameboard = (function(){
 	const gameBoardDiv = document.querySelector('#game-board')
 	
 	const blankBoardArray = [
-					[".", ".", "."],
-					[".", ".", "."],
-					[".", ".", "."],
+					[" ", " ", " "],
+					[" ", " ", " "],
+					[" ", " ", " "],
 				]
 	const boardArray = [
-					[".", ".", "."],
-					[".", ".", "."],
-					[".", ".", "."],
+					[" ", " ", " "],
+					[" ", " ", " "],
+					[" ", " ", " "],
 				]
 	
 	const displayCells = () => {
@@ -72,7 +72,7 @@ const PlayGame = (function(){
 	
 	const play = (rowIndex, colIndex) => {
 		
-		if (Gameboard.boardArray[rowIndex][colIndex] === ".") {
+		if (Gameboard.boardArray[rowIndex][colIndex] === " ") {
 			document.querySelector('.gameplay-state').textContent = ""
 			Gameboard.boardArray[rowIndex][colIndex] = Player.getCoin();
 			
@@ -129,7 +129,7 @@ const PlayGame = (function(){
 	const isGameFinished = () => {
 		
 		for (let row of Gameboard.boardArray){
-			if (row.includes(".")){
+			if (row.includes(" ")){
 				return false
 			}
 		}
