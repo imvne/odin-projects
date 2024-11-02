@@ -1,5 +1,17 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import onigiri from './assets/onigiri.png'
+import skull from './assets/skull.png'
+import flower from './assets/flower.jpg'
+import frog from './assets/frog.png'
+import notes from './assets/notes.jpg'
+import kitten from './assets/kitten.jpg'
+import russiandoll from './assets/russiandoll.png'
+import champi from './assets/champi.jpg'
+import ghost from './assets/ghost.jpg'
+import tangerine from './assets/tangerine.jpg'
+import spider from './assets/spider.jpg'
+import star from './assets/star.jpg'
 
 export default function App() {
 	
@@ -97,13 +109,11 @@ export default function App() {
 		<p className="score">{`score : ${score}`}</p>
 		
 		<div className="cards-container">
-			{}
 			{
 				cardsDeck.map( (card) => 
 					<button key={card.key} className="card" onClick={() => handleCardClick(card.key, card.clicked)} disabled={disabledButtons}>
-						<p className="key">{`key : ${card.key}`}</p>
-						<p className="name">{`name : ${card.name}`}</p>
-						<p className="clicked">{`clicked : ${card.clicked}`}</p>
+						<img src={flower} alt="" />
+						<p className="name">{card.name}</p>
 					</button>
 				
 				)
