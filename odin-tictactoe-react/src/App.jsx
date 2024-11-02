@@ -2,6 +2,7 @@ import { useState , useEffect} from 'react'
 import './App.css'
 
 export default function App(){
+	//il manque la gestion des styles de X et O au dessus de la grille
 	const [isCrossPlayerTurn, setIsCrossPlayerTurn] = useState(true)
 	const coin = isCrossPlayerTurn ? "x" : "o"
 	
