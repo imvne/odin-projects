@@ -1,34 +1,68 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import onigiri from './assets/onigiri.png'
-import skull from './assets/skull.png'
-import flower from './assets/flower.jpg'
-import frog from './assets/frog.png'
-import notes from './assets/notes.jpg'
-import kitten from './assets/kitten.jpg'
-import russiandoll from './assets/russiandoll.png'
-import champi from './assets/champi.jpg'
-import ghost from './assets/ghost.jpg'
-import tangerine from './assets/tangerine.jpg'
-import spider from './assets/spider.jpg'
-import star from './assets/star.jpg'
+import charactersImages from "./assets/charactersImages.js"
 
 export default function App() {
 	
 	const [cardsDeck, setCardsDeck] = useState([
 		{
-			key: "alieugv",
-			name: "kitty",
+			key: "1033",
+			name: "onigiri",
 			clicked: false,
 		},
 		{
-			key: "amiu",
+			key: "4291",
+			name: "skull",
+			clicked: false,
+		},
+		{
+			key: "3531",
+			name: "flower",
+			clicked: false,
+		},
+		{
+			key: "1536",
+			name: "frog",
+			clicked: false,
+		},
+		{
+			key: "2531",
+			name: "notes",
+			clicked: false,
+		},
+		{
+			key: "8547",
+			name: "kitten",
+			clicked: false,
+		},
+		{
+			key: "4315",
+			name: "russiandoll",
+			clicked: false,
+		},
+		{
+			key: "0842",
+			name: "champi",
+			clicked: false,
+		},
+		{
+			key: "5649",
+			name: "ghost",
+			clicked: false,
+		},
+		{
+			key: "1514",
+			name: "tangerine",
+			clicked: false,
+		},
+		{
+			key: "8589",
 			name: "spider",
 			clicked: false,
 		},
 		{
-			key: "zelfihva",
-			name: "rondoudou",
+			key: "1837",
+			name: "star",
 			clicked: false,
 		},
 	])
@@ -112,7 +146,7 @@ export default function App() {
 			{
 				cardsDeck.map( (card) => 
 					<button key={card.key} className="card" onClick={() => handleCardClick(card.key, card.clicked)} disabled={disabledButtons}>
-						<img src={flower} alt="" />
+						<img src={charactersImages[card.name]} alt="" />
 						<p className="name">{card.name}</p>
 					</button>
 				
