@@ -8,11 +8,11 @@ Je me suis d'abord concentré sur le principe du jeu : un jeu de cartes retourn�
 
 Voici comment j'ai découpé ce que je devais faire pour commencer :
 
-&nbsp;&nbsp;&nbsp;&nbsp;- créer un tableau qui contiendra la data des cartes  
-&nbsp;&nbsp;&nbsp;&nbsp;- pouvoir afficher dans la console si une carte à déjà été cliquée ou non  
-&nbsp;&nbsp;&nbsp;&nbsp;- créer un système qui mélangera les cartes à chaque fois qu'une est cliquée  
-&nbsp;&nbsp;&nbsp;&nbsp;- avoir un compteur de cartes cliquées qu'une fois  
-&nbsp;&nbsp;&nbsp;&nbsp;- reset le jeu (donc remettre toutes les cartes en non cliqué) quand une carte est cliquée plus d'une fois  
-&nbsp;&nbsp;&nbsp;&nbsp;- avoir une alerte quand le jeu est reset  
+    - créer un tableau qui contiendra la data des cartes  
+    - pouvoir afficher dans la console si une carte à déjà été cliquée ou non  
+    - créer un système qui mélangera les cartes à chaque fois qu'une est cliquée  
+    - avoir un compteur de cartes cliquées qu'une fois  
+    - reset le jeu (donc remettre toutes les cartes en non cliqué) quand une carte est cliquée plus d'une fois  
+    - avoir une alerte quand le jeu est reset  
 
 Je suis partie sur ça puis j'ai modifié et amélioré au fur et à mesure.  
