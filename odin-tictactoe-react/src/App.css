@@ -2,4 +2,64 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Playwrite GB S";
+}
+
+#root{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}
+
+.which-players-turn{
+	display: flex;
+	flex-direction: row;
+	width: 50px;
+	height: 30px;
+	margin: 20px;
+	padding: 10px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.player{
+	font-size: 20px;
+	color: rgb(161, 69, 84);
+}
+
+
+#game-board{
+	display: flex;
+	flex-direction: column;
+	border: 1px solid pink;
+}
+
+.board-row{
+	display: flex;
+	flex-direction: row;
+}
+
+.board-cell{
+	width: 100px;
+	height: 100px;
+	border: 0.5px solid pink;
+	cursor: pointer;
+	font-size: 47px;
+	color: rgb(205, 83, 104);
+	padding-bottom: 50px;
+}
+
+.gameplay-state{
+	height: 40px;
+}
+
+.play-again{
+	background-color: aliceblue;
+	border: 1px solid pink;
+	border-radius: 10px;
+	padding: 5px 10px;
+	cursor: pointer;
+	color: rgb(137, 38, 54);
 }
