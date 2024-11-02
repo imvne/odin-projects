@@ -5,72 +5,22 @@ import charactersImages from "./assets/charactersImages.js"
 export default function App() {
 	
 	const [cardsDeck, setCardsDeck] = useState([
-		{
-			key: "1033",
-			name: "onigiri",
-			clicked: false,
-		},
-		{
-			key: "4291",
-			name: "skull",
-			clicked: false,
-		},
-		{
-			key: "3531",
-			name: "flower",
-			clicked: false,
-		},
-		{
-			key: "1536",
-			name: "frog",
-			clicked: false,
-		},
-		{
-			key: "2531",
-			name: "notes",
-			clicked: false,
-		},
-		{
-			key: "8547",
-			name: "kitten",
-			clicked: false,
-		},
-		{
-			key: "4315",
-			name: "russiandoll",
-			clicked: false,
-		},
-		{
-			key: "0842",
-			name: "champi",
-			clicked: false,
-		},
-		{
-			key: "5649",
-			name: "ghost",
-			clicked: false,
-		},
-		{
-			key: "1514",
-			name: "tangerine",
-			clicked: false,
-		},
-		{
-			key: "8589",
-			name: "spider",
-			clicked: false,
-		},
-		{
-			key: "1837",
-			name: "star",
-			clicked: false,
-		},
+		{ key: "1033", name: "onigiri", clicked: false, },
+		{ key: "4291", name: "skull", clicked: false, },
+		{ key: "3531", name: "flower", clicked: false, },
+		{ key: "1536", name: "frog", clicked: false, },
+		{ key: "2531", name: "notes", clicked: false, },
+		{ key: "8547", name: "kitten", clicked: false, },
+		{ key: "4315", name: "russiandoll", clicked: false, },
+		{ key: "0842", name: "champi", clicked: false, },
+		{ key: "5649", name: "ghost", clicked: false, },
+		{ key: "1514", name: "tangerine", clicked: false, },
+		{ key: "8589", name: "spider", clicked: false, },
+		{ key: "1837", name: "star", clicked: false, },
 	])
 	
 	const [score, setScore] = useState(0)
-	
 	const [disabledButtons, setDisabledButtons] = useState(false)
-	
 	const [gamePlayState, setGamePlayState] = useState("")
 	
 	//
@@ -134,6 +84,7 @@ export default function App() {
 	useEffect(() => {
 		if (score === cardsDeck.length) {
 		    setGamePlayState("c'est gagné")
+		    setDisabledButtons(true)
 		}
 	}, [score, cardsDeck.length])
 	
