@@ -1,3 +1,4 @@
+import { Navigate } from "react-router-dom"
 import App from "./App"
 import Contact from "./pages/Contact"
 import Home from "./pages/Home"
@@ -11,6 +12,10 @@ const routes = [
 		children: [
 			{
 				index: true,
+				element: <Navigate to="/products" />, 
+			},
+			{
+				path: '/',
 				element: <Home />,
 			},
 			{
