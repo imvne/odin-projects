@@ -47,8 +47,8 @@ export default function Product({ index, product }){
 const ProductCard = styled.div`
 	border-radius: 10px;
 	width: 100%;
-	height: 80vh;
-	margin-bottom: 40px;
+	height: 600px;
+	margin-bottom: 60px;
 	display: grid;
 	grid-template-columns: 33% 33% 33%;
 	grid-template-rows: 33% 33% 33%;
@@ -65,8 +65,7 @@ const ProductCard = styled.div`
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		width: 200px;
-		height: 200px;
+		width: 75%;
 		grid-column: 1;
 		grid-row: 1;
 	`
@@ -91,11 +90,12 @@ const ProductCard = styled.div`
 		color: white;
 		font-weight: 100;
 		font-size: 20px;
+		margin: 40px 0px;
 	`
 
 	const StyledImg = styled.img`
-		width: 200px;
-		height: 200px;
+		width: 170px;
+		height: 170px;
 		grid-column: 2;
 		grid-row: 2;
 		filter: drop-shadow( -6.5px 10.4px 8px #00000053);

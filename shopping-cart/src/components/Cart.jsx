@@ -39,6 +39,7 @@ const CartContainer = styled.div`
 	flex-direction: column;
 	width: 94%;
 	padding: 50px;
+	margin-top: 40px;
 `
 
 const Products = styled.div`
