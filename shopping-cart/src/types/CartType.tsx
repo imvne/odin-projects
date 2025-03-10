@@ -1,8 +1,7 @@
-import ProductType from "./ProductType"
+// import CartProductType from "./CartProductType";
 
-type CartType = {
-	cartContent: ProductType[];
-	deleteProduct?: (productId: number) => void;
-}
+// type CartType = {
+// 	cartContent: CartProductType[];
+// }
 
-export default CartType
+// export default CartType

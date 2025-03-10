@@ -1,22 +1,23 @@
 import { createContext, useState } from "react";
-import ProductType from "../types/ProductType";
 import CartType from "../types/CartType";
+import CartProductType from "../types/CartProductType";
 
-const CartContext = createContext<CartType | null>(null);
+const CartContext = createContext<CartType>({
+	cartContent: [],
+	deleteProduct: () => {},
+});
+
 export default CartContext
 
 const CartContextProvider = ({ children }: { children: React.ReactNode }) => {
-	const [ cartContent, setCartContent ] = useState<ProductType[]>([
+	const [ cartContent, setCartContent ] = useState<CartProductType[]>([
 		{
 			id: 1,
-			name: "Produit",
-			price: 45,
-			money: "$",
 			quantity: 1
 		}
 	])
 	
-	const deleteProduct = (productId: number): void => {
+	const deleteProduct = (productId: number) => {
 		setCartContent((previousCart => {
 			return previousCart.filter((product) => product.id !== productId)
 		}))
